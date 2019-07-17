@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 class DogsList extends Component {
   render() {
@@ -8,7 +9,7 @@ class DogsList extends Component {
         <h1>Dogs List</h1>
         { dogBreeds === null ? 'Loading...' : 
           <ul>
-            { dogBreeds.map(breed => <li key={breed}>{breed}</li>) }
+            { dogBreeds.map(breed => <li key={ breed }><Link to={`/dog-breeds/${ breed }`}>{ breed}</Link></li>) }
           </ul>
         }
       </div>

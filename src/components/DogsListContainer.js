@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import request from 'superagent'
 import DogsList from './DogsList'
 
-export default class DogsListContainer extends Component {
+class DogsListContainer extends Component {
   state = { dogBreeds: null }
 
   componentDidMount() {
@@ -22,6 +22,8 @@ export default class DogsListContainer extends Component {
   }
 
   render() {
-    return <DogsList dogBreeds={this.state.dogBreeds} />
+    return <DogsList dogBreeds={ this.state.dogBreeds } />
   }
 }
+
+export default DogsListContainer
